@@ -1,0 +1,12 @@
+relative-paths: false
+models:
+  - model/model.npz
+vocabs:
+  - model/vocab.enes.spm
+  - model/vocab.enes.spm
+beam-size: 8
+normalize: 1
+word-penalty: 0
+mini-batch: 16
+maxi-batch: 100
+maxi-batch-sort: src
