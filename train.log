@@ -1,0 +1,1031 @@
+[2022-12-02 09:46:22] [marian] Marian v1.11.0 f00d0621 2022-02-08 08:39:24 -0800
+[2022-12-02 09:46:22] [marian] Running on efa14265c8ac as process 21756 with command line:
+[2022-12-02 09:46:22] [marian] /content/marian/build/marian -c transformer-model.yml -d 0 --workspace 9000 --optimizer /content/marian_mt_train/model.npz.optimizer.npz --guided-alignment /content/marian_mt_train/corpus.aln.gz --seed 1111 --model model/model.npz --train-sets /content/marian_mt_train/kde4_dataset/train.en /content/marian_mt_train/kde4_dataset/train.es --vocabs model/vocab.enes.spm model/vocab.enes.spm --dim-vocabs 32000 32000 --valid-sets /content/marian_mt_train/kde4_dataset/valid.en /content/marian_mt_train/kde4_dataset/valid.es --log model/train.log --valid-log model/valid.log
+[2022-12-02 09:46:22] [config] after: 0e
+[2022-12-02 09:46:22] [config] after-batches: 0
+[2022-12-02 09:46:22] [config] after-epochs: 0
+[2022-12-02 09:46:22] [config] all-caps-every: 0
+[2022-12-02 09:46:22] [config] allow-unk: false
+[2022-12-02 09:46:22] [config] authors: false
+[2022-12-02 09:46:22] [config] beam-size: 8
+[2022-12-02 09:46:22] [config] bert-class-symbol: "[CLS]"
+[2022-12-02 09:46:22] [config] bert-mask-symbol: "[MASK]"
+[2022-12-02 09:46:22] [config] bert-masking-fraction: 0.15
+[2022-12-02 09:46:22] [config] bert-sep-symbol: "[SEP]"
+[2022-12-02 09:46:22] [config] bert-train-type-embeddings: true
+[2022-12-02 09:46:22] [config] bert-type-vocab-size: 2
+[2022-12-02 09:46:22] [config] build-info: ""
+[2022-12-02 09:46:22] [config] check-gradient-nan: false
+[2022-12-02 09:46:22] [config] check-nan: false
+[2022-12-02 09:46:22] [config] cite: false
+[2022-12-02 09:46:22] [config] clip-norm: 0
+[2022-12-02 09:46:22] [config] cost-scaling:
+[2022-12-02 09:46:22] [config]   []
+[2022-12-02 09:46:22] [config] cost-type: ce-mean-words
+[2022-12-02 09:46:22] [config] cpu-threads: 0
+[2022-12-02 09:46:22] [config] data-threads: 8
+[2022-12-02 09:46:22] [config] data-weighting: ""
+[2022-12-02 09:46:22] [config] data-weighting-type: sentence
+[2022-12-02 09:46:22] [config] dec-cell: gru
+[2022-12-02 09:46:22] [config] dec-cell-base-depth: 2
+[2022-12-02 09:46:22] [config] dec-cell-high-depth: 1
+[2022-12-02 09:46:22] [config] dec-depth: 6
+[2022-12-02 09:46:22] [config] devices:
+[2022-12-02 09:46:22] [config]   - 0
+[2022-12-02 09:46:22] [config] dim-emb: 512
+[2022-12-02 09:46:22] [config] dim-rnn: 1024
+[2022-12-02 09:46:22] [config] dim-vocabs:
+[2022-12-02 09:46:22] [config]   - 32000
+[2022-12-02 09:46:22] [config]   - 32000
+[2022-12-02 09:46:22] [config] disp-first: 0
+[2022-12-02 09:46:22] [config] disp-freq: 100
+[2022-12-02 09:46:22] [config] disp-label-counts: true
+[2022-12-02 09:46:22] [config] dropout-rnn: 0
+[2022-12-02 09:46:22] [config] dropout-src: 0
+[2022-12-02 09:46:22] [config] dropout-trg: 0
+[2022-12-02 09:46:22] [config] dump-config: ""
+[2022-12-02 09:46:22] [config] dynamic-gradient-scaling:
+[2022-12-02 09:46:22] [config]   []
+[2022-12-02 09:46:22] [config] early-stopping: 10
+[2022-12-02 09:46:22] [config] early-stopping-on: first
+[2022-12-02 09:46:22] [config] embedding-fix-src: false
+[2022-12-02 09:46:22] [config] embedding-fix-trg: false
+[2022-12-02 09:46:22] [config] embedding-normalization: false
+[2022-12-02 09:46:22] [config] embedding-vectors:
+[2022-12-02 09:46:22] [config]   []
+[2022-12-02 09:46:22] [config] enc-cell: gru
+[2022-12-02 09:46:22] [config] enc-cell-depth: 1
+[2022-12-02 09:46:22] [config] enc-depth: 6
+[2022-12-02 09:46:22] [config] enc-type: bidirectional
+[2022-12-02 09:46:22] [config] english-title-case-every: 0
+[2022-12-02 09:46:22] [config] exponential-smoothing: 0.0001
+[2022-12-02 09:46:22] [config] factor-weight: 1
+[2022-12-02 09:46:22] [config] factors-combine: sum
+[2022-12-02 09:46:22] [config] factors-dim-emb: 0
+[2022-12-02 09:46:22] [config] gradient-checkpointing: false
+[2022-12-02 09:46:22] [config] gradient-norm-average-window: 100
+[2022-12-02 09:46:22] [config] guided-alignment: /content/marian_mt_train/corpus.aln.gz
+[2022-12-02 09:46:22] [config] guided-alignment-cost: mse
+[2022-12-02 09:46:22] [config] guided-alignment-weight: 0.1
+[2022-12-02 09:46:22] [config] ignore-model-config: false
+[2022-12-02 09:46:22] [config] input-types:
+[2022-12-02 09:46:22] [config]   []
+[2022-12-02 09:46:22] [config] interpolate-env-vars: false
+[2022-12-02 09:46:22] [config] keep-best: true
+[2022-12-02 09:46:22] [config] label-smoothing: 0.1
+[2022-12-02 09:46:22] [config] layer-normalization: false
+[2022-12-02 09:46:22] [config] learn-rate: 0.0003
+[2022-12-02 09:46:22] [config] lemma-dependency: ""
+[2022-12-02 09:46:22] [config] lemma-dim-emb: 0
+[2022-12-02 09:46:22] [config] log: model/train.log
+[2022-12-02 09:46:22] [config] log-level: info
+[2022-12-02 09:46:22] [config] log-time-zone: ""
+[2022-12-02 09:46:22] [config] logical-epoch:
+[2022-12-02 09:46:22] [config]   - 1e
+[2022-12-02 09:46:22] [config]   - 0
+[2022-12-02 09:46:22] [config] lr-decay: 0
+[2022-12-02 09:46:22] [config] lr-decay-freq: 50000
+[2022-12-02 09:46:22] [config] lr-decay-inv-sqrt:
+[2022-12-02 09:46:22] [config]   - 16000
+[2022-12-02 09:46:22] [config] lr-decay-repeat-warmup: false
+[2022-12-02 09:46:22] [config] lr-decay-reset-optimizer: false
+[2022-12-02 09:46:22] [config] lr-decay-start:
+[2022-12-02 09:46:22] [config]   - 10
+[2022-12-02 09:46:22] [config]   - 1
+[2022-12-02 09:46:22] [config] lr-decay-strategy: epoch+stalled
+[2022-12-02 09:46:22] [config] lr-report: false
+[2022-12-02 09:46:22] [config] lr-warmup: 16000
+[2022-12-02 09:46:22] [config] lr-warmup-at-reload: false
+[2022-12-02 09:46:22] [config] lr-warmup-cycle: false
+[2022-12-02 09:46:22] [config] lr-warmup-start-rate: 0
+[2022-12-02 09:46:22] [config] max-length: 100
+[2022-12-02 09:46:22] [config] max-length-crop: false
+[2022-12-02 09:46:22] [config] max-length-factor: 3
+[2022-12-02 09:46:22] [config] maxi-batch: 1000
+[2022-12-02 09:46:22] [config] maxi-batch-sort: trg
+[2022-12-02 09:46:22] [config] mini-batch: 1000
+[2022-12-02 09:46:22] [config] mini-batch-fit: true
+[2022-12-02 09:46:22] [config] mini-batch-fit-step: 10
+[2022-12-02 09:46:22] [config] mini-batch-round-up: true
+[2022-12-02 09:46:22] [config] mini-batch-track-lr: false
+[2022-12-02 09:46:22] [config] mini-batch-warmup: 0
+[2022-12-02 09:46:22] [config] mini-batch-words: 0
+[2022-12-02 09:46:22] [config] mini-batch-words-ref: 0
+[2022-12-02 09:46:22] [config] model: model/model.npz
+[2022-12-02 09:46:22] [config] multi-loss-type: sum
+[2022-12-02 09:46:22] [config] n-best: false
+[2022-12-02 09:46:22] [config] no-nccl: false
+[2022-12-02 09:46:22] [config] no-reload: false
+[2022-12-02 09:46:22] [config] no-restore-corpus: false
+[2022-12-02 09:46:22] [config] normalize: 1
+[2022-12-02 09:46:22] [config] normalize-gradient: false
+[2022-12-02 09:46:22] [config] num-devices: 0
+[2022-12-02 09:46:22] [config] optimizer: /content/marian_mt_train/model.npz.optimizer.npz
+[2022-12-02 09:46:22] [config] optimizer-delay: 1
+[2022-12-02 09:46:22] [config] optimizer-params:
+[2022-12-02 09:46:22] [config]   - 0.9
+[2022-12-02 09:46:22] [config]   - 0.98
+[2022-12-02 09:46:22] [config]   - 1e-09
+[2022-12-02 09:46:22] [config] output-omit-bias: false
+[2022-12-02 09:46:22] [config] overwrite: false
+[2022-12-02 09:46:22] [config] precision:
+[2022-12-02 09:46:22] [config]   - float32
+[2022-12-02 09:46:22] [config]   - float32
+[2022-12-02 09:46:22] [config] pretrained-model: ""
+[2022-12-02 09:46:22] [config] quantize-biases: false
+[2022-12-02 09:46:22] [config] quantize-bits: 0
+[2022-12-02 09:46:22] [config] quantize-log-based: false
+[2022-12-02 09:46:22] [config] quantize-optimization-steps: 0
+[2022-12-02 09:46:22] [config] quiet: false
+[2022-12-02 09:46:22] [config] quiet-translation: false
+[2022-12-02 09:46:22] [config] relative-paths: false
+[2022-12-02 09:46:22] [config] right-left: false
+[2022-12-02 09:46:22] [config] save-freq: 2ku
+[2022-12-02 09:46:22] [config] seed: 1111
+[2022-12-02 09:46:22] [config] sentencepiece-alphas:
+[2022-12-02 09:46:22] [config]   []
+[2022-12-02 09:46:22] [config] sentencepiece-max-lines: 2000000
+[2022-12-02 09:46:22] [config] sentencepiece-options: ""
+[2022-12-02 09:46:22] [config] sharding: global
+[2022-12-02 09:46:22] [config] shuffle: data
+[2022-12-02 09:46:22] [config] shuffle-in-ram: false
+[2022-12-02 09:46:22] [config] sigterm: save-and-exit
+[2022-12-02 09:46:22] [config] skip: false
+[2022-12-02 09:46:22] [config] sqlite: ""
+[2022-12-02 09:46:22] [config] sqlite-drop: false
+[2022-12-02 09:46:22] [config] sync-freq: 200u
+[2022-12-02 09:46:22] [config] sync-sgd: true
+[2022-12-02 09:46:22] [config] tempdir: /tmp
+[2022-12-02 09:46:22] [config] tied-embeddings: false
+[2022-12-02 09:46:22] [config] tied-embeddings-all: true
+[2022-12-02 09:46:22] [config] tied-embeddings-src: false
+[2022-12-02 09:46:22] [config] train-embedder-rank:
+[2022-12-02 09:46:22] [config]   []
+[2022-12-02 09:46:22] [config] train-sets:
+[2022-12-02 09:46:22] [config]   - /content/marian_mt_train/kde4_dataset/train.en
+[2022-12-02 09:46:22] [config]   - /content/marian_mt_train/kde4_dataset/train.es
+[2022-12-02 09:46:22] [config] transformer-aan-activation: swish
+[2022-12-02 09:46:22] [config] transformer-aan-depth: 2
+[2022-12-02 09:46:22] [config] transformer-aan-nogate: false
+[2022-12-02 09:46:22] [config] transformer-decoder-autoreg: self-attention
+[2022-12-02 09:46:22] [config] transformer-decoder-dim-ffn: 0
+[2022-12-02 09:46:22] [config] transformer-decoder-ffn-depth: 0
+[2022-12-02 09:46:22] [config] transformer-depth-scaling: false
+[2022-12-02 09:46:22] [config] transformer-dim-aan: 2048
+[2022-12-02 09:46:22] [config] transformer-dim-ffn: 2048
+[2022-12-02 09:46:22] [config] transformer-dropout: 0.1
+[2022-12-02 09:46:22] [config] transformer-dropout-attention: 0
+[2022-12-02 09:46:22] [config] transformer-dropout-ffn: 0
+[2022-12-02 09:46:22] [config] transformer-ffn-activation: relu
+[2022-12-02 09:46:22] [config] transformer-ffn-depth: 2
+[2022-12-02 09:46:22] [config] transformer-guided-alignment-layer: last
+[2022-12-02 09:46:22] [config] transformer-heads: 8
+[2022-12-02 09:46:22] [config] transformer-no-projection: false
+[2022-12-02 09:46:22] [config] transformer-pool: false
+[2022-12-02 09:46:22] [config] transformer-postprocess: dan
+[2022-12-02 09:46:22] [config] transformer-postprocess-emb: d
+[2022-12-02 09:46:22] [config] transformer-postprocess-top: ""
+[2022-12-02 09:46:22] [config] transformer-preprocess: ""
+[2022-12-02 09:46:22] [config] transformer-tied-layers:
+[2022-12-02 09:46:22] [config]   []
+[2022-12-02 09:46:22] [config] transformer-train-position-embeddings: false
+[2022-12-02 09:46:22] [config] tsv: false
+[2022-12-02 09:46:22] [config] tsv-fields: 0
+[2022-12-02 09:46:22] [config] type: transformer
+[2022-12-02 09:46:22] [config] ulr: false
+[2022-12-02 09:46:22] [config] ulr-dim-emb: 0
+[2022-12-02 09:46:22] [config] ulr-dropout: 0
+[2022-12-02 09:46:22] [config] ulr-keys-vectors: ""
+[2022-12-02 09:46:22] [config] ulr-query-vectors: ""
+[2022-12-02 09:46:22] [config] ulr-softmax-temperature: 1
+[2022-12-02 09:46:22] [config] ulr-trainable-transformation: false
+[2022-12-02 09:46:22] [config] unlikelihood-loss: false
+[2022-12-02 09:46:22] [config] valid-freq: 2ku
+[2022-12-02 09:46:22] [config] valid-log: model/valid.log
+[2022-12-02 09:46:22] [config] valid-max-length: 1000
+[2022-12-02 09:46:22] [config] valid-metrics:
+[2022-12-02 09:46:22] [config]   - ce-mean-words
+[2022-12-02 09:46:22] [config]   - bleu
+[2022-12-02 09:46:22] [config]   - perplexity
+[2022-12-02 09:46:22] [config]   - bleu-detok
+[2022-12-02 09:46:22] [config] valid-mini-batch: 16
+[2022-12-02 09:46:22] [config] valid-reset-stalled: false
+[2022-12-02 09:46:22] [config] valid-script-args:
+[2022-12-02 09:46:22] [config]   []
+[2022-12-02 09:46:22] [config] valid-script-path: ""
+[2022-12-02 09:46:22] [config] valid-sets:
+[2022-12-02 09:46:22] [config]   - /content/marian_mt_train/kde4_dataset/valid.en
+[2022-12-02 09:46:22] [config]   - /content/marian_mt_train/kde4_dataset/valid.es
+[2022-12-02 09:46:22] [config] valid-translation-output: ""
+[2022-12-02 09:46:22] [config] version: v1.11.0 f00d0621 2022-02-08 08:39:24 -0800
+[2022-12-02 09:46:22] [config] vocabs:
+[2022-12-02 09:46:22] [config]   - model/vocab.enes.spm
+[2022-12-02 09:46:22] [config]   - model/vocab.enes.spm
+[2022-12-02 09:46:22] [config] word-penalty: 0
+[2022-12-02 09:46:22] [config] word-scores: false
+[2022-12-02 09:46:22] [config] workspace: 9000
+[2022-12-02 09:46:22] [config] Loaded model has been created with Marian v1.11.0 f00d0621 2022-02-08 08:39:24 -0800
+[2022-12-02 09:46:22] Using synchronous SGD
+[2022-12-02 09:46:22] [comm] Compiled without MPI support. Running as a single process on efa14265c8ac
+[2022-12-02 09:46:22] Synced seed 1111
+[2022-12-02 09:46:22] [data] Loading SentencePiece vocabulary from file model/vocab.enes.spm
+[2022-12-02 09:46:23] [data] Setting vocabulary size for input 0 to 32,000
+[2022-12-02 09:46:23] [data] Loading SentencePiece vocabulary from file model/vocab.enes.spm
+[2022-12-02 09:46:23] [data] Setting vocabulary size for input 1 to 32,000
+[2022-12-02 09:46:23] [data] Using word alignments from file /content/marian_mt_train/corpus.aln.gz
+[2022-12-02 09:46:23] [batching] Collecting statistics for batch fitting with step size 10
+[2022-12-02 09:46:24] [memory] Extending reserved space to 9088 MB (device gpu0)
+[2022-12-02 09:46:24] Error: Unknown optimizer type: /content/marian_mt_train/model.npz.optimizer.npz
+[2022-12-02 09:46:24] Error: Aborted from marian::Ptr<marian::OptimizerBase> marian::Optimizer(marian::Ptr<marian::Options>) in /content/marian/src/optimizers/optimizers.cpp:554
+
+[CALL STACK]
+[0x558bc56b230d]    marian::  Optimizer  (std::shared_ptr<marian::Options>) + 0x4bd
+[0x558bc5435c1a]    marian::GraphGroup::  initGraphsAndOpts  ()        + 0x4ca
+[0x558bc5439dc2]    marian::GraphGroup::  GraphGroup  (std::shared_ptr<marian::Options>,  std::shared_ptr<marian::IMPIWrapper>) + 0x3c2
+[0x558bc542206e]    marian::SyncGraphGroup::  SyncGraphGroup  (std::shared_ptr<marian::Options>,  std::shared_ptr<marian::IMPIWrapper>) + 0x6e
+[0x558bc4fc8b7a]    marian::Train<marian::SyncGraphGroup>::  run  ()   + 0x32a
+[0x558bc4f11eb6]    mainTrainer  (int,  char**)                        + 0x136
+[0x558bc4ec7005]    main                                               + 0x35
+[0x7ff8c20cbc87]    __libc_start_main                                  + 0xe7
+[0x558bc4f1046a]    _start                                             + 0x2a
+
+[2022-12-02 09:47:06] [marian] Marian v1.11.0 f00d0621 2022-02-08 08:39:24 -0800
+[2022-12-02 09:47:06] [marian] Running on efa14265c8ac as process 21782 with command line:
+[2022-12-02 09:47:06] [marian] /content/marian/build/marian -c transformer-model.yml -d 0 --workspace 9000 --guided-alignment /content/marian_mt_train/corpus.aln.gz --seed 1111 --model model/model.npz --train-sets /content/marian_mt_train/kde4_dataset/train.en /content/marian_mt_train/kde4_dataset/train.es --vocabs model/vocab.enes.spm model/vocab.enes.spm --dim-vocabs 32000 32000 --valid-sets /content/marian_mt_train/kde4_dataset/valid.en /content/marian_mt_train/kde4_dataset/valid.es --log model/train.log --valid-log model/valid.log
+[2022-12-02 09:47:06] [config] after: 0e
+[2022-12-02 09:47:06] [config] after-batches: 0
+[2022-12-02 09:47:06] [config] after-epochs: 0
+[2022-12-02 09:47:06] [config] all-caps-every: 0
+[2022-12-02 09:47:06] [config] allow-unk: false
+[2022-12-02 09:47:06] [config] authors: false
+[2022-12-02 09:47:06] [config] beam-size: 8
+[2022-12-02 09:47:06] [config] bert-class-symbol: "[CLS]"
+[2022-12-02 09:47:06] [config] bert-mask-symbol: "[MASK]"
+[2022-12-02 09:47:06] [config] bert-masking-fraction: 0.15
+[2022-12-02 09:47:06] [config] bert-sep-symbol: "[SEP]"
+[2022-12-02 09:47:06] [config] bert-train-type-embeddings: true
+[2022-12-02 09:47:06] [config] bert-type-vocab-size: 2
+[2022-12-02 09:47:06] [config] build-info: ""
+[2022-12-02 09:47:06] [config] check-gradient-nan: false
+[2022-12-02 09:47:06] [config] check-nan: false
+[2022-12-02 09:47:06] [config] cite: false
+[2022-12-02 09:47:06] [config] clip-norm: 0
+[2022-12-02 09:47:06] [config] cost-scaling:
+[2022-12-02 09:47:06] [config]   []
+[2022-12-02 09:47:06] [config] cost-type: ce-mean-words
+[2022-12-02 09:47:06] [config] cpu-threads: 0
+[2022-12-02 09:47:06] [config] data-threads: 8
+[2022-12-02 09:47:06] [config] data-weighting: ""
+[2022-12-02 09:47:06] [config] data-weighting-type: sentence
+[2022-12-02 09:47:06] [config] dec-cell: gru
+[2022-12-02 09:47:06] [config] dec-cell-base-depth: 2
+[2022-12-02 09:47:06] [config] dec-cell-high-depth: 1
+[2022-12-02 09:47:06] [config] dec-depth: 6
+[2022-12-02 09:47:06] [config] devices:
+[2022-12-02 09:47:06] [config]   - 0
+[2022-12-02 09:47:06] [config] dim-emb: 512
+[2022-12-02 09:47:06] [config] dim-rnn: 1024
+[2022-12-02 09:47:06] [config] dim-vocabs:
+[2022-12-02 09:47:06] [config]   - 32000
+[2022-12-02 09:47:06] [config]   - 32000
+[2022-12-02 09:47:06] [config] disp-first: 0
+[2022-12-02 09:47:06] [config] disp-freq: 100
+[2022-12-02 09:47:06] [config] disp-label-counts: true
+[2022-12-02 09:47:06] [config] dropout-rnn: 0
+[2022-12-02 09:47:06] [config] dropout-src: 0
+[2022-12-02 09:47:06] [config] dropout-trg: 0
+[2022-12-02 09:47:06] [config] dump-config: ""
+[2022-12-02 09:47:06] [config] dynamic-gradient-scaling:
+[2022-12-02 09:47:06] [config]   []
+[2022-12-02 09:47:06] [config] early-stopping: 10
+[2022-12-02 09:47:06] [config] early-stopping-on: first
+[2022-12-02 09:47:06] [config] embedding-fix-src: false
+[2022-12-02 09:47:06] [config] embedding-fix-trg: false
+[2022-12-02 09:47:06] [config] embedding-normalization: false
+[2022-12-02 09:47:06] [config] embedding-vectors:
+[2022-12-02 09:47:06] [config]   []
+[2022-12-02 09:47:06] [config] enc-cell: gru
+[2022-12-02 09:47:06] [config] enc-cell-depth: 1
+[2022-12-02 09:47:06] [config] enc-depth: 6
+[2022-12-02 09:47:06] [config] enc-type: bidirectional
+[2022-12-02 09:47:06] [config] english-title-case-every: 0
+[2022-12-02 09:47:06] [config] exponential-smoothing: 0.0001
+[2022-12-02 09:47:06] [config] factor-weight: 1
+[2022-12-02 09:47:06] [config] factors-combine: sum
+[2022-12-02 09:47:06] [config] factors-dim-emb: 0
+[2022-12-02 09:47:06] [config] gradient-checkpointing: false
+[2022-12-02 09:47:06] [config] gradient-norm-average-window: 100
+[2022-12-02 09:47:06] [config] guided-alignment: /content/marian_mt_train/corpus.aln.gz
+[2022-12-02 09:47:06] [config] guided-alignment-cost: mse
+[2022-12-02 09:47:06] [config] guided-alignment-weight: 0.1
+[2022-12-02 09:47:06] [config] ignore-model-config: false
+[2022-12-02 09:47:06] [config] input-types:
+[2022-12-02 09:47:06] [config]   []
+[2022-12-02 09:47:06] [config] interpolate-env-vars: false
+[2022-12-02 09:47:06] [config] keep-best: true
+[2022-12-02 09:47:06] [config] label-smoothing: 0.1
+[2022-12-02 09:47:06] [config] layer-normalization: false
+[2022-12-02 09:47:06] [config] learn-rate: 0.0003
+[2022-12-02 09:47:06] [config] lemma-dependency: ""
+[2022-12-02 09:47:06] [config] lemma-dim-emb: 0
+[2022-12-02 09:47:06] [config] log: model/train.log
+[2022-12-02 09:47:06] [config] log-level: info
+[2022-12-02 09:47:06] [config] log-time-zone: ""
+[2022-12-02 09:47:06] [config] logical-epoch:
+[2022-12-02 09:47:06] [config]   - 1e
+[2022-12-02 09:47:06] [config]   - 0
+[2022-12-02 09:47:06] [config] lr-decay: 0
+[2022-12-02 09:47:06] [config] lr-decay-freq: 50000
+[2022-12-02 09:47:06] [config] lr-decay-inv-sqrt:
+[2022-12-02 09:47:06] [config]   - 16000
+[2022-12-02 09:47:06] [config] lr-decay-repeat-warmup: false
+[2022-12-02 09:47:06] [config] lr-decay-reset-optimizer: false
+[2022-12-02 09:47:06] [config] lr-decay-start:
+[2022-12-02 09:47:06] [config]   - 10
+[2022-12-02 09:47:06] [config]   - 1
+[2022-12-02 09:47:06] [config] lr-decay-strategy: epoch+stalled
+[2022-12-02 09:47:06] [config] lr-report: false
+[2022-12-02 09:47:06] [config] lr-warmup: 16000
+[2022-12-02 09:47:06] [config] lr-warmup-at-reload: false
+[2022-12-02 09:47:06] [config] lr-warmup-cycle: false
+[2022-12-02 09:47:06] [config] lr-warmup-start-rate: 0
+[2022-12-02 09:47:06] [config] max-length: 100
+[2022-12-02 09:47:06] [config] max-length-crop: false
+[2022-12-02 09:47:06] [config] max-length-factor: 3
+[2022-12-02 09:47:06] [config] maxi-batch: 1000
+[2022-12-02 09:47:06] [config] maxi-batch-sort: trg
+[2022-12-02 09:47:06] [config] mini-batch: 1000
+[2022-12-02 09:47:06] [config] mini-batch-fit: true
+[2022-12-02 09:47:06] [config] mini-batch-fit-step: 10
+[2022-12-02 09:47:06] [config] mini-batch-round-up: true
+[2022-12-02 09:47:06] [config] mini-batch-track-lr: false
+[2022-12-02 09:47:06] [config] mini-batch-warmup: 0
+[2022-12-02 09:47:06] [config] mini-batch-words: 0
+[2022-12-02 09:47:06] [config] mini-batch-words-ref: 0
+[2022-12-02 09:47:06] [config] model: model/model.npz
+[2022-12-02 09:47:06] [config] multi-loss-type: sum
+[2022-12-02 09:47:06] [config] n-best: false
+[2022-12-02 09:47:06] [config] no-nccl: false
+[2022-12-02 09:47:06] [config] no-reload: false
+[2022-12-02 09:47:06] [config] no-restore-corpus: false
+[2022-12-02 09:47:06] [config] normalize: 1
+[2022-12-02 09:47:06] [config] normalize-gradient: false
+[2022-12-02 09:47:06] [config] num-devices: 0
+[2022-12-02 09:47:06] [config] optimizer: adam
+[2022-12-02 09:47:06] [config] optimizer-delay: 1
+[2022-12-02 09:47:06] [config] optimizer-params:
+[2022-12-02 09:47:06] [config]   - 0.9
+[2022-12-02 09:47:06] [config]   - 0.98
+[2022-12-02 09:47:06] [config]   - 1e-09
+[2022-12-02 09:47:06] [config] output-omit-bias: false
+[2022-12-02 09:47:06] [config] overwrite: false
+[2022-12-02 09:47:06] [config] precision:
+[2022-12-02 09:47:06] [config]   - float32
+[2022-12-02 09:47:06] [config]   - float32
+[2022-12-02 09:47:06] [config] pretrained-model: ""
+[2022-12-02 09:47:06] [config] quantize-biases: false
+[2022-12-02 09:47:06] [config] quantize-bits: 0
+[2022-12-02 09:47:06] [config] quantize-log-based: false
+[2022-12-02 09:47:06] [config] quantize-optimization-steps: 0
+[2022-12-02 09:47:06] [config] quiet: false
+[2022-12-02 09:47:06] [config] quiet-translation: false
+[2022-12-02 09:47:06] [config] relative-paths: false
+[2022-12-02 09:47:06] [config] right-left: false
+[2022-12-02 09:47:06] [config] save-freq: 2ku
+[2022-12-02 09:47:06] [config] seed: 1111
+[2022-12-02 09:47:06] [config] sentencepiece-alphas:
+[2022-12-02 09:47:06] [config]   []
+[2022-12-02 09:47:06] [config] sentencepiece-max-lines: 2000000
+[2022-12-02 09:47:06] [config] sentencepiece-options: ""
+[2022-12-02 09:47:06] [config] sharding: global
+[2022-12-02 09:47:06] [config] shuffle: data
+[2022-12-02 09:47:06] [config] shuffle-in-ram: false
+[2022-12-02 09:47:06] [config] sigterm: save-and-exit
+[2022-12-02 09:47:06] [config] skip: false
+[2022-12-02 09:47:06] [config] sqlite: ""
+[2022-12-02 09:47:06] [config] sqlite-drop: false
+[2022-12-02 09:47:06] [config] sync-freq: 200u
+[2022-12-02 09:47:06] [config] sync-sgd: true
+[2022-12-02 09:47:06] [config] tempdir: /tmp
+[2022-12-02 09:47:06] [config] tied-embeddings: false
+[2022-12-02 09:47:06] [config] tied-embeddings-all: true
+[2022-12-02 09:47:06] [config] tied-embeddings-src: false
+[2022-12-02 09:47:06] [config] train-embedder-rank:
+[2022-12-02 09:47:06] [config]   []
+[2022-12-02 09:47:06] [config] train-sets:
+[2022-12-02 09:47:06] [config]   - /content/marian_mt_train/kde4_dataset/train.en
+[2022-12-02 09:47:06] [config]   - /content/marian_mt_train/kde4_dataset/train.es
+[2022-12-02 09:47:06] [config] transformer-aan-activation: swish
+[2022-12-02 09:47:06] [config] transformer-aan-depth: 2
+[2022-12-02 09:47:06] [config] transformer-aan-nogate: false
+[2022-12-02 09:47:06] [config] transformer-decoder-autoreg: self-attention
+[2022-12-02 09:47:06] [config] transformer-decoder-dim-ffn: 0
+[2022-12-02 09:47:06] [config] transformer-decoder-ffn-depth: 0
+[2022-12-02 09:47:06] [config] transformer-depth-scaling: false
+[2022-12-02 09:47:06] [config] transformer-dim-aan: 2048
+[2022-12-02 09:47:06] [config] transformer-dim-ffn: 2048
+[2022-12-02 09:47:06] [config] transformer-dropout: 0.1
+[2022-12-02 09:47:06] [config] transformer-dropout-attention: 0
+[2022-12-02 09:47:06] [config] transformer-dropout-ffn: 0
+[2022-12-02 09:47:06] [config] transformer-ffn-activation: relu
+[2022-12-02 09:47:06] [config] transformer-ffn-depth: 2
+[2022-12-02 09:47:06] [config] transformer-guided-alignment-layer: last
+[2022-12-02 09:47:06] [config] transformer-heads: 8
+[2022-12-02 09:47:06] [config] transformer-no-projection: false
+[2022-12-02 09:47:06] [config] transformer-pool: false
+[2022-12-02 09:47:06] [config] transformer-postprocess: dan
+[2022-12-02 09:47:06] [config] transformer-postprocess-emb: d
+[2022-12-02 09:47:06] [config] transformer-postprocess-top: ""
+[2022-12-02 09:47:06] [config] transformer-preprocess: ""
+[2022-12-02 09:47:06] [config] transformer-tied-layers:
+[2022-12-02 09:47:06] [config]   []
+[2022-12-02 09:47:06] [config] transformer-train-position-embeddings: false
+[2022-12-02 09:47:06] [config] tsv: false
+[2022-12-02 09:47:06] [config] tsv-fields: 0
+[2022-12-02 09:47:06] [config] type: transformer
+[2022-12-02 09:47:06] [config] ulr: false
+[2022-12-02 09:47:06] [config] ulr-dim-emb: 0
+[2022-12-02 09:47:06] [config] ulr-dropout: 0
+[2022-12-02 09:47:06] [config] ulr-keys-vectors: ""
+[2022-12-02 09:47:06] [config] ulr-query-vectors: ""
+[2022-12-02 09:47:06] [config] ulr-softmax-temperature: 1
+[2022-12-02 09:47:06] [config] ulr-trainable-transformation: false
+[2022-12-02 09:47:06] [config] unlikelihood-loss: false
+[2022-12-02 09:47:06] [config] valid-freq: 2ku
+[2022-12-02 09:47:06] [config] valid-log: model/valid.log
+[2022-12-02 09:47:06] [config] valid-max-length: 1000
+[2022-12-02 09:47:06] [config] valid-metrics:
+[2022-12-02 09:47:06] [config]   - ce-mean-words
+[2022-12-02 09:47:06] [config]   - bleu
+[2022-12-02 09:47:06] [config]   - perplexity
+[2022-12-02 09:47:06] [config]   - bleu-detok
+[2022-12-02 09:47:06] [config] valid-mini-batch: 16
+[2022-12-02 09:47:06] [config] valid-reset-stalled: false
+[2022-12-02 09:47:06] [config] valid-script-args:
+[2022-12-02 09:47:06] [config]   []
+[2022-12-02 09:47:06] [config] valid-script-path: ""
+[2022-12-02 09:47:06] [config] valid-sets:
+[2022-12-02 09:47:06] [config]   - /content/marian_mt_train/kde4_dataset/valid.en
+[2022-12-02 09:47:06] [config]   - /content/marian_mt_train/kde4_dataset/valid.es
+[2022-12-02 09:47:06] [config] valid-translation-output: ""
+[2022-12-02 09:47:06] [config] version: v1.11.0 f00d0621 2022-02-08 08:39:24 -0800
+[2022-12-02 09:47:06] [config] vocabs:
+[2022-12-02 09:47:06] [config]   - model/vocab.enes.spm
+[2022-12-02 09:47:06] [config]   - model/vocab.enes.spm
+[2022-12-02 09:47:06] [config] word-penalty: 0
+[2022-12-02 09:47:06] [config] word-scores: false
+[2022-12-02 09:47:06] [config] workspace: 9000
+[2022-12-02 09:47:06] [config] Loaded model has been created with Marian v1.11.0 f00d0621 2022-02-08 08:39:24 -0800
+[2022-12-02 09:47:06] Using synchronous SGD
+[2022-12-02 09:47:06] [comm] Compiled without MPI support. Running as a single process on efa14265c8ac
+[2022-12-02 09:47:06] Synced seed 1111
+[2022-12-02 09:47:06] [data] Loading SentencePiece vocabulary from file model/vocab.enes.spm
+[2022-12-02 09:47:06] [data] Setting vocabulary size for input 0 to 32,000
+[2022-12-02 09:47:06] [data] Loading SentencePiece vocabulary from file model/vocab.enes.spm
+[2022-12-02 09:47:06] [data] Setting vocabulary size for input 1 to 32,000
+[2022-12-02 09:47:06] [data] Using word alignments from file /content/marian_mt_train/corpus.aln.gz
+[2022-12-02 09:47:06] [batching] Collecting statistics for batch fitting with step size 10
+[2022-12-02 09:47:07] [memory] Extending reserved space to 9088 MB (device gpu0)
+[2022-12-02 09:47:07] [comm] Using NCCL 2.8.3 for GPU communication
+[2022-12-02 09:47:07] [comm] Using global sharding
+[2022-12-02 09:47:07] [comm] NCCLCommunicators constructed successfully
+[2022-12-02 09:47:07] [training] Using 1 GPUs
+[2022-12-02 09:47:07] [logits] Applying loss function for 1 factor(s)
+[2022-12-02 09:47:07] [memory] Reserving 230 MB, device gpu0
+[2022-12-02 09:47:09] [gpu] 16-bit TensorCores enabled for float32 matrix operations
+[2022-12-02 09:47:10] [memory] Reserving 230 MB, device gpu0
+[2022-12-02 09:47:40] [batching] Done. Typical MB size is 8,012 target words
+[2022-12-02 09:47:40] [memory] Extending reserved space to 9088 MB (device gpu0)
+[2022-12-02 09:47:40] [comm] Using NCCL 2.8.3 for GPU communication
+[2022-12-02 09:47:40] [comm] Using global sharding
+[2022-12-02 09:47:41] [comm] NCCLCommunicators constructed successfully
+[2022-12-02 09:47:41] [training] Using 1 GPUs
+[2022-12-02 09:47:41] Loading model from model/model.npz
+[2022-12-02 09:47:43] Allocating memory for general optimizer shards
+[2022-12-02 09:47:43] [memory] Reserving 230 MB, device gpu0
+[2022-12-02 09:47:43] Loading Adam parameters
+[2022-12-02 09:47:43] [memory] Reserving 461 MB, device gpu0
+[2022-12-02 09:47:43] [memory] Reserving 230 MB, device gpu0
+[2022-12-02 09:47:43] [training] Master parameters and optimizers restored from training checkpoint model/model.npz and model/model.npz.optimizer.npz
+[2022-12-02 09:47:44] [data] Restoring the corpus state to epoch 31, batch 14000
+[2022-12-02 09:47:44] [data] Shuffling data
+[2022-12-02 09:47:44] [data] Done reading 214,655 sentences
+[2022-12-02 09:47:45] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 09:47:50] Training started
+[2022-12-02 09:47:50] [training] Batches are processed as 1 process(es) x 1 devices/process
+[2022-12-02 09:47:50] [memory] Reserving 230 MB, device gpu0
+[2022-12-02 09:47:50] Parameter type float32, optimization type float32, casting types false
+[2022-12-02 09:48:30] Ep. 31 : Up. 14100 : Sen. 70,339 : Cost 0.63000858 : Time 49.71s : 10546.62 words/s : gNorm 1.3260
+[2022-12-02 09:49:12] Ep. 31 : Up. 14200 : Sen. 111,169 : Cost 0.52750403 : Time 41.73s : 12978.39 words/s : gNorm 1.5133
+[2022-12-02 09:49:52] Ep. 31 : Up. 14300 : Sen. 157,749 : Cost 0.55766678 : Time 40.20s : 13224.35 words/s : gNorm 1.3653
+[2022-12-02 09:50:31] Ep. 31 : Up. 14400 : Sen. 204,954 : Cost 0.59045213 : Time 38.97s : 12373.85 words/s : gNorm 1.5784
+[2022-12-02 09:50:37] Seen 212,676 samples
+[2022-12-02 09:50:37] Starting data epoch 32 in logical epoch 32
+[2022-12-02 09:50:37] [data] Shuffling data
+[2022-12-02 09:50:37] [data] Done reading 214,655 sentences
+[2022-12-02 09:50:38] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 09:51:18] Ep. 32 : Up. 14500 : Sen. 37,852 : Cost 0.59833574 : Time 47.18s : 11305.18 words/s : gNorm 1.4193
+[2022-12-02 09:51:57] Ep. 32 : Up. 14600 : Sen. 84,130 : Cost 0.53382093 : Time 38.67s : 12907.47 words/s : gNorm 1.4251
+[2022-12-02 09:52:35] Ep. 32 : Up. 14700 : Sen. 132,985 : Cost 0.56179786 : Time 38.77s : 12924.06 words/s : gNorm 1.3239
+[2022-12-02 09:53:15] Ep. 32 : Up. 14800 : Sen. 176,773 : Cost 0.55301040 : Time 40.01s : 13204.37 words/s : gNorm 1.3981
+[2022-12-02 09:53:49] Seen 212,676 samples
+[2022-12-02 09:53:49] Starting data epoch 33 in logical epoch 33
+[2022-12-02 09:53:49] [data] Shuffling data
+[2022-12-02 09:53:49] [data] Done reading 214,655 sentences
+[2022-12-02 09:53:50] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 09:54:03] Ep. 33 : Up. 14900 : Sen. 8,990 : Cost 0.56062019 : Time 47.62s : 11634.34 words/s : gNorm 1.2554
+[2022-12-02 09:54:45] Ep. 33 : Up. 15000 : Sen. 53,192 : Cost 0.57126290 : Time 41.62s : 13118.64 words/s : gNorm 1.3650
+[2022-12-02 09:55:26] Ep. 33 : Up. 15100 : Sen. 96,240 : Cost 0.48591849 : Time 41.27s : 13024.38 words/s : gNorm 1.1659
+[2022-12-02 09:56:05] Ep. 33 : Up. 15200 : Sen. 142,050 : Cost 0.54028261 : Time 38.67s : 12692.18 words/s : gNorm 1.4563
+[2022-12-02 09:56:43] Ep. 33 : Up. 15300 : Sen. 194,132 : Cost 0.59726840 : Time 38.63s : 13074.67 words/s : gNorm 1.3809
+[2022-12-02 09:57:01] Seen 212,676 samples
+[2022-12-02 09:57:01] Starting data epoch 34 in logical epoch 34
+[2022-12-02 09:57:01] [data] Shuffling data
+[2022-12-02 09:57:01] [data] Done reading 214,655 sentences
+[2022-12-02 09:57:03] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 09:57:29] Ep. 34 : Up. 15400 : Sen. 26,544 : Cost 0.57409471 : Time 45.52s : 11250.94 words/s : gNorm 1.3992
+[2022-12-02 09:58:09] Ep. 34 : Up. 15500 : Sen. 69,789 : Cost 0.51339900 : Time 40.62s : 13203.97 words/s : gNorm 1.2834
+[2022-12-02 09:58:50] Ep. 34 : Up. 15600 : Sen. 116,724 : Cost 0.56590182 : Time 40.21s : 13261.37 words/s : gNorm 1.2240
+[2022-12-02 09:59:29] Ep. 34 : Up. 15700 : Sen. 161,031 : Cost 0.49203002 : Time 39.08s : 12466.59 words/s : gNorm 1.6965
+[2022-12-02 10:00:09] Ep. 34 : Up. 15800 : Sen. 207,717 : Cost 0.56106156 : Time 40.42s : 13267.66 words/s : gNorm 1.3684
+[2022-12-02 10:00:13] Seen 212,676 samples
+[2022-12-02 10:00:13] Starting data epoch 35 in logical epoch 35
+[2022-12-02 10:00:13] [data] Shuffling data
+[2022-12-02 10:00:13] [data] Done reading 214,655 sentences
+[2022-12-02 10:00:15] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:00:57] Ep. 35 : Up. 15900 : Sen. 43,516 : Cost 0.52988213 : Time 47.78s : 11079.27 words/s : gNorm 1.1824
+[2022-12-02 10:01:37] Ep. 35 : Up. 16000 : Sen. 92,034 : Cost 0.55914676 : Time 39.85s : 13090.01 words/s : gNorm 1.1791
+[2022-12-02 10:01:37] Saving model weights and runtime parameters to model/model.iter16000.npz
+[2022-12-02 10:01:38] Saving model weights and runtime parameters to model/model.npz
+[2022-12-02 10:01:39] Saving Adam parameters
+[2022-12-02 10:01:41] [training] Saving training checkpoint to model/model.npz and model/model.npz.optimizer.npz
+[2022-12-02 10:01:47] Saving model weights and runtime parameters to model/model.npz.best-ce-mean-words.npz
+[2022-12-02 10:01:48] [valid] Ep. 35 : Up. 16000 : ce-mean-words : 1.62407 : new best
+[2022-12-02 10:01:48] Translating validation set...
+[2022-12-02 10:01:49] [valid] First sentence's tokens as scored:
+[2022-12-02 10:01:49] [valid] Decoding validation set with SentencePieceVocab for scoring
+[2022-12-02 10:01:49] [valid]   Hyp: Así que puede obtener la página que desea ver , las páginas pueden ser dadas ( y ) un nombre . Esto se puede hacer de la forma que se utiliza : haga doble clic sobre la página que desee renombrar . También podrá cambiar el nombre de la página . Por supuesto , también existe un acceso rápido de teclado , puede utilizar cualquier hora mientras escribe una nota . La nota rápida es : Ctrl ; M .
+[2022-12-02 10:01:49] [valid]   Ref: Para que pueda ir a la página que desea ver , las páginas pueden ( y deben ) tener un nombre . Esto se puede hacer del modo usual : seleccione la página que quiere renombrar , espere un segundo y pulse una vez más , entonces podrá renombrarla . También dispone de un acceso rápido de teclado que puede usar mientras está escribiendo una nota : Ctrl ; M .
+[2022-12-02 10:01:49] [valid] References contain unknown word, metric scores may be inaccurate
+[2022-12-02 10:01:50] Best translation 0 : entrante:
+[2022-12-02 10:01:50] Best translation 1 : Obteniendo información EXIF para %1...
+[2022-12-02 10:01:50] Best translation 2 : Pasa a la vista « Siguiente » seleccionando el elemento « Qué es lo siguiente » o pulse el botón « Siguiente » en la barra de herramientas.
+[2022-12-02 10:01:50] Best translation 3 : & Brad. Hards;
+[2022-12-02 10:01:50] Best translation 4 : Puntuación:
+[2022-12-02 10:01:50] Best translation 5 : Archivos web
+[2022-12-02 10:01:50] Best translation 10 : Mostrar conversación
+[2022-12-02 10:01:50] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 10:01:50] Best translation 40 : Envío:
+[2022-12-02 10:01:50] Best translation 80 : arcsin(x)
+[2022-12-02 10:01:52] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 10:01:54] Best translation 320 : Configurar las preferencias anti-Aliasas
+[2022-12-02 10:01:57] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 10:02:14] Best translation 1280 : Cantidad
+[2022-12-02 10:02:21] Total translation time: 32.56746s
+[2022-12-02 10:02:21] Saving model weights and runtime parameters to model/model.npz.best-bleu.npz
+[2022-12-02 10:02:22] [valid] Ep. 35 : Up. 16000 : bleu : 45.3174 : new best
+[2022-12-02 10:02:24] Saving model weights and runtime parameters to model/model.npz.best-perplexity.npz
+[2022-12-02 10:02:25] [valid] Ep. 35 : Up. 16000 : perplexity : 5.07369 : new best
+[2022-12-02 10:02:25] Translating validation set...
+[2022-12-02 10:02:27] Best translation 0 : entrante:
+[2022-12-02 10:02:27] Best translation 1 : Obteniendo información EXIF para %1...
+[2022-12-02 10:02:27] Best translation 2 : Pasa a la vista « Siguiente » seleccionando el elemento « Qué es lo siguiente » o pulse el botón « Siguiente » en la barra de herramientas.
+[2022-12-02 10:02:27] Best translation 3 : & Brad. Hards;
+[2022-12-02 10:02:27] Best translation 4 : Puntuación:
+[2022-12-02 10:02:27] Best translation 5 : Archivos web
+[2022-12-02 10:02:27] Best translation 10 : Mostrar conversación
+[2022-12-02 10:02:27] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 10:02:27] Best translation 40 : Envío:
+[2022-12-02 10:02:27] Best translation 80 : arcsin(x)
+[2022-12-02 10:02:29] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 10:02:31] Best translation 320 : Configurar las preferencias anti-Aliasas
+[2022-12-02 10:02:35] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 10:02:51] Best translation 1280 : Cantidad
+[2022-12-02 10:02:58] Total translation time: 32.52711s
+[2022-12-02 10:02:58] Saving model weights and runtime parameters to model/model.npz.best-bleu-detok.npz
+[2022-12-02 10:02:59] [valid] Ep. 35 : Up. 16000 : bleu-detok : 45.3174 : new best
+[2022-12-02 10:03:38] Ep. 35 : Up. 16100 : Sen. 140,415 : Cost 0.57495296 : Time 120.73s : 4241.53 words/s : gNorm 1.3577
+[2022-12-02 10:04:17] Ep. 35 : Up. 16200 : Sen. 185,863 : Cost 0.51752913 : Time 39.99s : 12976.50 words/s : gNorm 1.5007
+[2022-12-02 10:04:48] Seen 212,676 samples
+[2022-12-02 10:04:48] Starting data epoch 36 in logical epoch 36
+[2022-12-02 10:04:48] [data] Shuffling data
+[2022-12-02 10:04:48] [data] Done reading 214,655 sentences
+[2022-12-02 10:04:49] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:05:04] Ep. 36 : Up. 16300 : Sen. 11,904 : Cost 0.46208993 : Time 46.30s : 11031.00 words/s : gNorm 1.3843
+[2022-12-02 10:05:45] Ep. 36 : Up. 16400 : Sen. 56,055 : Cost 0.50965822 : Time 41.46s : 12941.25 words/s : gNorm 1.2344
+[2022-12-02 10:06:26] Ep. 36 : Up. 16500 : Sen. 102,420 : Cost 0.48901281 : Time 40.80s : 12779.04 words/s : gNorm 1.2640
+[2022-12-02 10:07:05] Ep. 36 : Up. 16600 : Sen. 153,759 : Cost 0.61957514 : Time 38.55s : 13206.07 words/s : gNorm 1.3083
+[2022-12-02 10:07:46] Ep. 36 : Up. 16700 : Sen. 195,156 : Cost 0.50773585 : Time 40.92s : 13180.38 words/s : gNorm 1.2815
+[2022-12-02 10:08:01] Seen 212,676 samples
+[2022-12-02 10:08:01] Starting data epoch 37 in logical epoch 37
+[2022-12-02 10:08:01] [data] Shuffling data
+[2022-12-02 10:08:01] [data] Done reading 214,655 sentences
+[2022-12-02 10:08:02] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:08:32] Ep. 37 : Up. 16800 : Sen. 26,249 : Cost 0.49103010 : Time 46.81s : 11311.91 words/s : gNorm 1.2019
+[2022-12-02 10:09:13] Ep. 37 : Up. 16900 : Sen. 70,052 : Cost 0.48468119 : Time 40.66s : 13107.70 words/s : gNorm 1.1061
+[2022-12-02 10:09:53] Ep. 37 : Up. 17000 : Sen. 117,936 : Cost 0.53677231 : Time 40.09s : 13250.24 words/s : gNorm 1.1353
+[2022-12-02 10:10:33] Ep. 37 : Up. 17100 : Sen. 163,804 : Cost 0.52314657 : Time 39.55s : 12937.22 words/s : gNorm 1.3038
+[2022-12-02 10:11:12] Ep. 37 : Up. 17200 : Sen. 210,520 : Cost 0.54372442 : Time 38.96s : 12636.97 words/s : gNorm 1.3014
+[2022-12-02 10:11:14] Seen 212,676 samples
+[2022-12-02 10:11:14] Starting data epoch 38 in logical epoch 38
+[2022-12-02 10:11:14] [data] Shuffling data
+[2022-12-02 10:11:14] [data] Done reading 214,655 sentences
+[2022-12-02 10:11:16] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:12:03] Ep. 38 : Up. 17300 : Sen. 40,812 : Cost 0.49957931 : Time 51.23s : 10771.82 words/s : gNorm 1.1215
+[2022-12-02 10:12:42] Ep. 38 : Up. 17400 : Sen. 85,845 : Cost 0.49305558 : Time 39.23s : 13063.24 words/s : gNorm 1.1509
+[2022-12-02 10:13:22] Ep. 38 : Up. 17500 : Sen. 133,489 : Cost 0.49123558 : Time 39.70s : 13109.21 words/s : gNorm 1.2212
+[2022-12-02 10:14:02] Ep. 38 : Up. 17600 : Sen. 179,105 : Cost 0.47644326 : Time 40.19s : 12962.89 words/s : gNorm 1.3368
+[2022-12-02 10:14:29] Seen 212,676 samples
+[2022-12-02 10:14:29] Starting data epoch 39 in logical epoch 39
+[2022-12-02 10:14:29] [data] Shuffling data
+[2022-12-02 10:14:29] [data] Done reading 214,655 sentences
+[2022-12-02 10:14:30] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:14:48] Ep. 39 : Up. 17700 : Sen. 14,038 : Cost 0.53847110 : Time 45.59s : 11232.59 words/s : gNorm 1.2272
+[2022-12-02 10:15:26] Ep. 39 : Up. 17800 : Sen. 60,572 : Cost 0.49447265 : Time 38.75s : 12959.59 words/s : gNorm 1.3173
+[2022-12-02 10:16:07] Ep. 39 : Up. 17900 : Sen. 103,499 : Cost 0.48932436 : Time 40.71s : 12867.89 words/s : gNorm 1.1863
+[2022-12-02 10:16:48] Ep. 39 : Up. 18000 : Sen. 148,187 : Cost 0.47636598 : Time 41.12s : 12914.32 words/s : gNorm 1.2803
+[2022-12-02 10:16:48] Saving model weights and runtime parameters to model/model.iter18000.npz
+[2022-12-02 10:16:49] Saving model weights and runtime parameters to model/model.npz
+[2022-12-02 10:16:51] Saving Adam parameters
+[2022-12-02 10:16:52] [training] Saving training checkpoint to model/model.npz and model/model.npz.optimizer.npz
+[2022-12-02 10:16:59] Saving model weights and runtime parameters to model/model.npz.best-ce-mean-words.npz
+[2022-12-02 10:17:00] [valid] Ep. 39 : Up. 18000 : ce-mean-words : 1.57675 : new best
+[2022-12-02 10:17:00] Translating validation set...
+[2022-12-02 10:17:01] Best translation 0 : entrante:
+[2022-12-02 10:17:01] Best translation 1 : Obteniendo información EXIF para %1...
+[2022-12-02 10:17:01] Best translation 2 : Pasa a la vista « Qué es lo siguiente » seleccionando el elemento Ver Qué es lo siguiente o presionando el botón « Qué es lo siguiente » en la barra de herramientas.
+[2022-12-02 10:17:01] Best translation 3 : & Brad. Hards;
+[2022-12-02 10:17:01] Best translation 4 : Puntuación:
+[2022-12-02 10:17:01] Best translation 5 : Archivos web
+[2022-12-02 10:17:01] Best translation 10 : Mostrar conversación
+[2022-12-02 10:17:01] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 10:17:01] Best translation 40 : Enviar:
+[2022-12-02 10:17:01] Best translation 80 : arcsin(x)
+[2022-12-02 10:17:03] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 10:17:05] Best translation 320 : Configurar preferencias de anti-Alita
+[2022-12-02 10:17:10] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 10:17:19] Best translation 1280 : Cantidad
+[2022-12-02 10:17:25] Total translation time: 25.43906s
+[2022-12-02 10:17:25] Saving model weights and runtime parameters to model/model.npz.best-bleu.npz
+[2022-12-02 10:17:26] [valid] Ep. 39 : Up. 18000 : bleu : 46.9387 : new best
+[2022-12-02 10:17:29] Saving model weights and runtime parameters to model/model.npz.best-perplexity.npz
+[2022-12-02 10:17:30] [valid] Ep. 39 : Up. 18000 : perplexity : 4.83922 : new best
+[2022-12-02 10:17:30] Translating validation set...
+[2022-12-02 10:17:31] Best translation 0 : entrante:
+[2022-12-02 10:17:31] Best translation 1 : Obteniendo información EXIF para %1...
+[2022-12-02 10:17:31] Best translation 2 : Pasa a la vista « Qué es lo siguiente » seleccionando el elemento Ver Qué es lo siguiente o presionando el botón « Qué es lo siguiente » en la barra de herramientas.
+[2022-12-02 10:17:31] Best translation 3 : & Brad. Hards;
+[2022-12-02 10:17:31] Best translation 4 : Puntuación:
+[2022-12-02 10:17:31] Best translation 5 : Archivos web
+[2022-12-02 10:17:31] Best translation 10 : Mostrar conversación
+[2022-12-02 10:17:31] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 10:17:31] Best translation 40 : Enviar:
+[2022-12-02 10:17:31] Best translation 80 : arcsin(x)
+[2022-12-02 10:17:33] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 10:17:35] Best translation 320 : Configurar preferencias de anti-Alita
+[2022-12-02 10:17:40] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 10:17:49] Best translation 1280 : Cantidad
+[2022-12-02 10:17:55] Total translation time: 25.46578s
+[2022-12-02 10:17:55] Saving model weights and runtime parameters to model/model.npz.best-bleu-detok.npz
+[2022-12-02 10:17:56] [valid] Ep. 39 : Up. 18000 : bleu-detok : 46.9387 : new best
+[2022-12-02 10:18:34] Ep. 39 : Up. 18100 : Sen. 195,482 : Cost 0.50423473 : Time 105.90s : 4682.79 words/s : gNorm 1.2943
+[2022-12-02 10:18:49] Seen 212,676 samples
+[2022-12-02 10:18:49] Starting data epoch 40 in logical epoch 40
+[2022-12-02 10:18:49] [data] Shuffling data
+[2022-12-02 10:18:50] [data] Done reading 214,655 sentences
+[2022-12-02 10:18:51] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:19:20] Ep. 40 : Up. 18200 : Sen. 30,074 : Cost 0.47819057 : Time 46.29s : 11213.16 words/s : gNorm 1.2056
+[2022-12-02 10:20:02] Ep. 40 : Up. 18300 : Sen. 72,802 : Cost 0.44051665 : Time 41.20s : 13018.37 words/s : gNorm 1.0606
+[2022-12-02 10:20:41] Ep. 40 : Up. 18400 : Sen. 117,213 : Cost 0.48922616 : Time 39.98s : 13145.98 words/s : gNorm 1.2163
+[2022-12-02 10:21:19] Ep. 40 : Up. 18500 : Sen. 169,575 : Cost 0.60136461 : Time 37.81s : 13392.25 words/s : gNorm 1.4361
+[2022-12-02 10:22:02] Ep. 40 : Up. 18600 : Sen. 212,676 : Cost 0.46298099 : Time 42.86s : 12670.09 words/s : gNorm 1.1613
+[2022-12-02 10:22:02] Seen 212,676 samples
+[2022-12-02 10:22:02] Starting data epoch 41 in logical epoch 41
+[2022-12-02 10:22:02] [data] Shuffling data
+[2022-12-02 10:22:02] [data] Done reading 214,655 sentences
+[2022-12-02 10:22:03] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:22:48] Ep. 41 : Up. 18700 : Sen. 41,204 : Cost 0.43336436 : Time 46.29s : 11209.62 words/s : gNorm 1.2871
+[2022-12-02 10:23:29] Ep. 41 : Up. 18800 : Sen. 90,284 : Cost 0.53379846 : Time 40.58s : 13050.49 words/s : gNorm 1.1441
+[2022-12-02 10:24:09] Ep. 41 : Up. 18900 : Sen. 137,350 : Cost 0.48954383 : Time 39.63s : 13238.27 words/s : gNorm 1.1136
+[2022-12-02 10:24:48] Ep. 41 : Up. 19000 : Sen. 185,948 : Cost 0.49640930 : Time 39.23s : 12974.82 words/s : gNorm 1.3322
+[2022-12-02 10:25:14] Seen 212,676 samples
+[2022-12-02 10:25:14] Starting data epoch 42 in logical epoch 42
+[2022-12-02 10:25:14] [data] Shuffling data
+[2022-12-02 10:25:14] [data] Done reading 214,655 sentences
+[2022-12-02 10:25:15] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:25:35] Ep. 42 : Up. 19100 : Sen. 15,124 : Cost 0.45418826 : Time 47.30s : 11377.87 words/s : gNorm 1.0913
+[2022-12-02 10:26:15] Ep. 42 : Up. 19200 : Sen. 60,662 : Cost 0.40697441 : Time 40.02s : 12896.79 words/s : gNorm 1.1045
+[2022-12-02 10:26:56] Ep. 42 : Up. 19300 : Sen. 103,709 : Cost 0.47529510 : Time 40.38s : 12929.96 words/s : gNorm 1.0926
+[2022-12-02 10:27:35] Ep. 42 : Up. 19400 : Sen. 150,629 : Cost 0.46941707 : Time 39.65s : 12893.50 words/s : gNorm 1.1153
+[2022-12-02 10:28:14] Ep. 42 : Up. 19500 : Sen. 199,219 : Cost 0.50874043 : Time 38.76s : 13058.31 words/s : gNorm 1.2299
+[2022-12-02 10:28:27] Seen 212,676 samples
+[2022-12-02 10:28:27] Starting data epoch 43 in logical epoch 43
+[2022-12-02 10:28:27] [data] Shuffling data
+[2022-12-02 10:28:27] [data] Done reading 214,655 sentences
+[2022-12-02 10:28:28] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:29:01] Ep. 43 : Up. 19600 : Sen. 31,083 : Cost 0.47945616 : Time 47.37s : 11490.01 words/s : gNorm 1.0015
+[2022-12-02 10:29:42] Ep. 43 : Up. 19700 : Sen. 74,328 : Cost 0.43032259 : Time 40.21s : 12934.78 words/s : gNorm 1.1653
+[2022-12-02 10:30:20] Ep. 43 : Up. 19800 : Sen. 122,886 : Cost 0.50321889 : Time 38.70s : 13159.73 words/s : gNorm 1.2188
+[2022-12-02 10:30:59] Ep. 43 : Up. 19900 : Sen. 170,858 : Cost 0.50185621 : Time 38.81s : 13205.29 words/s : gNorm 1.2587
+[2022-12-02 10:31:38] Seen 212,676 samples
+[2022-12-02 10:31:38] Starting data epoch 44 in logical epoch 44
+[2022-12-02 10:31:38] [data] Shuffling data
+[2022-12-02 10:31:38] [data] Done reading 214,655 sentences
+[2022-12-02 10:31:39] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:31:46] Ep. 44 : Up. 20000 : Sen. 2,581 : Cost 0.44064277 : Time 46.96s : 11358.73 words/s : gNorm 1.1563
+[2022-12-02 10:31:46] Saving model weights and runtime parameters to model/model.iter20000.npz
+[2022-12-02 10:31:47] Saving model weights and runtime parameters to model/model.npz
+[2022-12-02 10:31:49] Saving Adam parameters
+[2022-12-02 10:31:50] [training] Saving training checkpoint to model/model.npz and model/model.npz.optimizer.npz
+[2022-12-02 10:31:56] Saving model weights and runtime parameters to model/model.npz.best-ce-mean-words.npz
+[2022-12-02 10:31:58] [valid] Ep. 44 : Up. 20000 : ce-mean-words : 1.56571 : new best
+[2022-12-02 10:31:58] Translating validation set...
+[2022-12-02 10:31:59] Best translation 0 : entrante:
+[2022-12-02 10:31:59] Best translation 1 : Obteniendo información EXIF para %1...
+[2022-12-02 10:31:59] Best translation 2 : Pasa a la vista « Qué es lo siguiente » seleccionando la opción Ver Qué es lo siguiente del menú o presionando el botón « Qué es lo siguiente » de la barra de herramientas.
+[2022-12-02 10:31:59] Best translation 3 : & Brad. Hards;
+[2022-12-02 10:31:59] Best translation 4 : Puntuación:
+[2022-12-02 10:31:59] Best translation 5 : Archivos web
+[2022-12-02 10:31:59] Best translation 10 : Mostrar conversación
+[2022-12-02 10:31:59] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 10:31:59] Best translation 40 : Enviar:
+[2022-12-02 10:31:59] Best translation 80 : arcsin(x)
+[2022-12-02 10:32:02] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 10:32:04] Best translation 320 : Configurar preferencias de anti-Alita
+[2022-12-02 10:32:08] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 10:32:18] Best translation 1280 : Cantidad
+[2022-12-02 10:32:26] Total translation time: 28.70470s
+[2022-12-02 10:32:26] Saving model weights and runtime parameters to model/model.npz.best-bleu.npz
+[2022-12-02 10:32:28] [valid] Ep. 44 : Up. 20000 : bleu : 48.0642 : new best
+[2022-12-02 10:32:31] Saving model weights and runtime parameters to model/model.npz.best-perplexity.npz
+[2022-12-02 10:32:32] [valid] Ep. 44 : Up. 20000 : perplexity : 4.78607 : new best
+[2022-12-02 10:32:32] Translating validation set...
+[2022-12-02 10:32:34] Best translation 0 : entrante:
+[2022-12-02 10:32:34] Best translation 1 : Obteniendo información EXIF para %1...
+[2022-12-02 10:32:34] Best translation 2 : Pasa a la vista « Qué es lo siguiente » seleccionando la opción Ver Qué es lo siguiente del menú o presionando el botón « Qué es lo siguiente » de la barra de herramientas.
+[2022-12-02 10:32:34] Best translation 3 : & Brad. Hards;
+[2022-12-02 10:32:34] Best translation 4 : Puntuación:
+[2022-12-02 10:32:34] Best translation 5 : Archivos web
+[2022-12-02 10:32:34] Best translation 10 : Mostrar conversación
+[2022-12-02 10:32:34] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 10:32:34] Best translation 40 : Enviar:
+[2022-12-02 10:32:34] Best translation 80 : arcsin(x)
+[2022-12-02 10:32:37] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 10:32:40] Best translation 320 : Configurar preferencias de anti-Alita
+[2022-12-02 10:32:43] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 10:32:52] Best translation 1280 : Cantidad
+[2022-12-02 10:32:59] Total translation time: 27.08570s
+[2022-12-02 10:32:59] Saving model weights and runtime parameters to model/model.npz.best-bleu-detok.npz
+[2022-12-02 10:33:00] [valid] Ep. 44 : Up. 20000 : bleu-detok : 48.0642 : new best
+[2022-12-02 10:33:39] Ep. 44 : Up. 20100 : Sen. 46,385 : Cost 0.44373015 : Time 113.36s : 4546.48 words/s : gNorm 1.0827
+[2022-12-02 10:34:21] Ep. 44 : Up. 20200 : Sen. 87,600 : Cost 0.41923308 : Time 41.51s : 13112.95 words/s : gNorm 1.0751
+[2022-12-02 10:35:00] Ep. 44 : Up. 20300 : Sen. 140,302 : Cost 0.48595738 : Time 38.75s : 13053.15 words/s : gNorm 1.2604
+[2022-12-02 10:35:40] Ep. 44 : Up. 20400 : Sen. 187,487 : Cost 0.46970496 : Time 40.05s : 13081.30 words/s : gNorm 1.1571
+[2022-12-02 10:36:04] Seen 212,676 samples
+[2022-12-02 10:36:04] Starting data epoch 45 in logical epoch 45
+[2022-12-02 10:36:04] [data] Shuffling data
+[2022-12-02 10:36:04] [data] Done reading 214,655 sentences
+[2022-12-02 10:36:05] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:36:26] Ep. 45 : Up. 20500 : Sen. 16,852 : Cost 0.45704076 : Time 46.40s : 11409.41 words/s : gNorm 1.1196
+[2022-12-02 10:37:03] Ep. 45 : Up. 20600 : Sen. 65,934 : Cost 0.53307801 : Time 36.59s : 13056.76 words/s : gNorm 1.1141
+[2022-12-02 10:37:45] Ep. 45 : Up. 20700 : Sen. 111,082 : Cost 0.44817770 : Time 42.36s : 12966.31 words/s : gNorm 1.1420
+[2022-12-02 10:38:27] Ep. 45 : Up. 20800 : Sen. 154,695 : Cost 0.40039194 : Time 41.47s : 12980.86 words/s : gNorm 1.2007
+[2022-12-02 10:39:06] Ep. 45 : Up. 20900 : Sen. 200,887 : Cost 0.46293989 : Time 39.14s : 12928.84 words/s : gNorm 1.0867
+[2022-12-02 10:39:16] Seen 212,676 samples
+[2022-12-02 10:39:16] Starting data epoch 46 in logical epoch 46
+[2022-12-02 10:39:16] [data] Shuffling data
+[2022-12-02 10:39:16] [data] Done reading 214,655 sentences
+[2022-12-02 10:39:17] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:39:53] Ep. 46 : Up. 21000 : Sen. 38,378 : Cost 0.49530503 : Time 47.31s : 11476.42 words/s : gNorm 0.9125
+[2022-12-02 10:40:33] Ep. 46 : Up. 21100 : Sen. 83,693 : Cost 0.43114153 : Time 40.06s : 13060.45 words/s : gNorm 1.0738
+[2022-12-02 10:41:13] Ep. 46 : Up. 21200 : Sen. 124,539 : Cost 0.42389032 : Time 39.93s : 12928.18 words/s : gNorm 1.1212
+[2022-12-02 10:41:52] Ep. 46 : Up. 21300 : Sen. 168,555 : Cost 0.44063547 : Time 38.80s : 13077.14 words/s : gNorm 1.0463
+[2022-12-02 10:42:28] Seen 212,676 samples
+[2022-12-02 10:42:28] Starting data epoch 47 in logical epoch 47
+[2022-12-02 10:42:28] [data] Shuffling data
+[2022-12-02 10:42:28] [data] Done reading 214,655 sentences
+[2022-12-02 10:42:29] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:42:39] Ep. 47 : Up. 21400 : Sen. 2,892 : Cost 0.44233790 : Time 46.80s : 11330.54 words/s : gNorm 1.1148
+[2022-12-02 10:43:20] Ep. 47 : Up. 21500 : Sen. 44,137 : Cost 0.42025238 : Time 41.35s : 12903.46 words/s : gNorm 0.9948
+[2022-12-02 10:43:58] Ep. 47 : Up. 21600 : Sen. 91,379 : Cost 0.46336821 : Time 38.31s : 13174.06 words/s : gNorm 1.1589
+[2022-12-02 10:44:39] Ep. 47 : Up. 21700 : Sen. 135,673 : Cost 0.44429967 : Time 41.12s : 12968.19 words/s : gNorm 0.9926
+[2022-12-02 10:45:18] Ep. 47 : Up. 21800 : Sen. 184,201 : Cost 0.43326366 : Time 38.55s : 13001.24 words/s : gNorm 1.2906
+[2022-12-02 10:45:40] Seen 212,676 samples
+[2022-12-02 10:45:40] Starting data epoch 48 in logical epoch 48
+[2022-12-02 10:45:40] [data] Shuffling data
+[2022-12-02 10:45:40] [data] Done reading 214,655 sentences
+[2022-12-02 10:45:41] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:46:04] Ep. 48 : Up. 21900 : Sen. 17,199 : Cost 0.45474401 : Time 45.74s : 11379.57 words/s : gNorm 1.1977
+[2022-12-02 10:46:46] Ep. 48 : Up. 22000 : Sen. 62,019 : Cost 0.42719433 : Time 41.98s : 13006.35 words/s : gNorm 0.9895
+[2022-12-02 10:46:46] Saving model weights and runtime parameters to model/model.iter22000.npz
+[2022-12-02 10:46:47] Saving model weights and runtime parameters to model/model.npz
+[2022-12-02 10:46:48] Saving Adam parameters
+[2022-12-02 10:46:49] [training] Saving training checkpoint to model/model.npz and model/model.npz.optimizer.npz
+[2022-12-02 10:46:56] [valid] Ep. 48 : Up. 22000 : ce-mean-words : 1.5797 : stalled 1 times (last best: 1.56571)
+[2022-12-02 10:46:56] Translating validation set...
+[2022-12-02 10:46:57] Best translation 0 : entrante:
+[2022-12-02 10:46:57] Best translation 1 : Obteniendo información EXIF para %1...
+[2022-12-02 10:46:57] Best translation 2 : Pasa a la vista « Qué es lo siguiente » seleccionando la opción Ver Qué es lo siguiente o presionando el botón « Qué es lo siguiente » de la barra de herramientas.
+[2022-12-02 10:46:57] Best translation 3 : & Brad. Hards;
+[2022-12-02 10:46:57] Best translation 4 : Puntuación:
+[2022-12-02 10:46:57] Best translation 5 : Archivos web
+[2022-12-02 10:46:57] Best translation 10 : Mostrar conversación
+[2022-12-02 10:46:57] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 10:46:57] Best translation 40 : Cargar:
+[2022-12-02 10:46:57] Best translation 80 : arcsin(x)
+[2022-12-02 10:47:01] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 10:47:03] Best translation 320 : Configurar preferencias de anti-Alita
+[2022-12-02 10:47:06] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 10:47:17] Best translation 1280 : Cantidad
+[2022-12-02 10:47:24] Total translation time: 27.57382s
+[2022-12-02 10:47:24] Saving model weights and runtime parameters to model/model.npz.best-bleu.npz
+[2022-12-02 10:47:25] [valid] Ep. 48 : Up. 22000 : bleu : 48.8603 : new best
+[2022-12-02 10:47:27] [valid] Ep. 48 : Up. 22000 : perplexity : 4.85349 : stalled 1 times (last best: 4.78607)
+[2022-12-02 10:47:27] Translating validation set...
+[2022-12-02 10:47:28] Best translation 0 : entrante:
+[2022-12-02 10:47:28] Best translation 1 : Obteniendo información EXIF para %1...
+[2022-12-02 10:47:28] Best translation 2 : Pasa a la vista « Qué es lo siguiente » seleccionando la opción Ver Qué es lo siguiente o presionando el botón « Qué es lo siguiente » de la barra de herramientas.
+[2022-12-02 10:47:28] Best translation 3 : & Brad. Hards;
+[2022-12-02 10:47:28] Best translation 4 : Puntuación:
+[2022-12-02 10:47:28] Best translation 5 : Archivos web
+[2022-12-02 10:47:28] Best translation 10 : Mostrar conversación
+[2022-12-02 10:47:28] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 10:47:28] Best translation 40 : Cargar:
+[2022-12-02 10:47:28] Best translation 80 : arcsin(x)
+[2022-12-02 10:47:31] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 10:47:34] Best translation 320 : Configurar preferencias de anti-Alita
+[2022-12-02 10:47:37] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 10:47:48] Best translation 1280 : Cantidad
+[2022-12-02 10:47:55] Total translation time: 27.65228s
+[2022-12-02 10:47:55] Saving model weights and runtime parameters to model/model.npz.best-bleu-detok.npz
+[2022-12-02 10:47:56] [valid] Ep. 48 : Up. 22000 : bleu-detok : 48.8603 : new best
+[2022-12-02 10:48:36] Ep. 48 : Up. 22100 : Sen. 106,869 : Cost 0.41100797 : Time 109.94s : 4642.64 words/s : gNorm 1.0261
+[2022-12-02 10:49:14] Ep. 48 : Up. 22200 : Sen. 157,663 : Cost 0.47247910 : Time 38.63s : 12933.83 words/s : gNorm 1.2269
+[2022-12-02 10:49:55] Ep. 48 : Up. 22300 : Sen. 201,482 : Cost 0.42759717 : Time 40.48s : 13263.97 words/s : gNorm 1.1080
+[2022-12-02 10:50:02] Seen 212,676 samples
+[2022-12-02 10:50:02] Starting data epoch 49 in logical epoch 49
+[2022-12-02 10:50:02] [data] Shuffling data
+[2022-12-02 10:50:02] [data] Done reading 214,655 sentences
+[2022-12-02 10:50:03] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:50:39] Ep. 49 : Up. 22400 : Sen. 40,997 : Cost 0.53493708 : Time 44.43s : 11524.44 words/s : gNorm 1.0344
+[2022-12-02 10:51:19] Ep. 49 : Up. 22500 : Sen. 84,524 : Cost 0.41392696 : Time 39.39s : 12884.40 words/s : gNorm 1.2308
+[2022-12-02 10:51:58] Ep. 49 : Up. 22600 : Sen. 133,237 : Cost 0.46730182 : Time 39.13s : 12927.36 words/s : gNorm 1.2613
+[2022-12-02 10:52:39] Ep. 49 : Up. 22700 : Sen. 175,966 : Cost 0.40189260 : Time 41.64s : 13208.97 words/s : gNorm 1.0368
+[2022-12-02 10:53:14] Seen 212,676 samples
+[2022-12-02 10:53:14] Starting data epoch 50 in logical epoch 50
+[2022-12-02 10:53:14] [data] Shuffling data
+[2022-12-02 10:53:14] [data] Done reading 214,655 sentences
+[2022-12-02 10:53:15] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:53:27] Ep. 50 : Up. 22800 : Sen. 8,357 : Cost 0.42260534 : Time 47.26s : 11312.00 words/s : gNorm 1.0755
+[2022-12-02 10:54:09] Ep. 50 : Up. 22900 : Sen. 50,221 : Cost 0.38809711 : Time 42.68s : 12787.86 words/s : gNorm 0.9396
+[2022-12-02 10:54:48] Ep. 50 : Up. 23000 : Sen. 99,109 : Cost 0.44597563 : Time 38.72s : 13211.86 words/s : gNorm 1.1812
+[2022-12-02 10:55:26] Ep. 50 : Up. 23100 : Sen. 144,621 : Cost 0.42808944 : Time 37.94s : 12873.41 words/s : gNorm 1.2374
+[2022-12-02 10:56:06] Ep. 50 : Up. 23200 : Sen. 190,522 : Cost 0.44819364 : Time 40.44s : 13011.32 words/s : gNorm 1.1463
+[2022-12-02 10:56:27] Seen 212,676 samples
+[2022-12-02 10:56:27] Starting data epoch 51 in logical epoch 51
+[2022-12-02 10:56:27] [data] Shuffling data
+[2022-12-02 10:56:27] [data] Done reading 214,655 sentences
+[2022-12-02 10:56:28] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 10:56:53] Ep. 51 : Up. 23300 : Sen. 24,211 : Cost 0.45414144 : Time 46.42s : 11585.95 words/s : gNorm 0.9835
+[2022-12-02 10:57:33] Ep. 51 : Up. 23400 : Sen. 70,314 : Cost 0.41316703 : Time 39.94s : 12644.88 words/s : gNorm 0.9407
+[2022-12-02 10:58:11] Ep. 51 : Up. 23500 : Sen. 115,257 : Cost 0.45146263 : Time 38.41s : 13037.72 words/s : gNorm 1.0686
+[2022-12-02 10:58:51] Ep. 51 : Up. 23600 : Sen. 162,058 : Cost 0.41693926 : Time 40.10s : 13025.93 words/s : gNorm 1.0610
+[2022-12-02 10:59:34] Ep. 51 : Up. 23700 : Sen. 205,410 : Cost 0.41006526 : Time 42.66s : 12836.41 words/s : gNorm 1.0640
+[2022-12-02 10:59:40] Seen 212,676 samples
+[2022-12-02 10:59:40] Starting data epoch 52 in logical epoch 52
+[2022-12-02 10:59:40] [data] Shuffling data
+[2022-12-02 10:59:40] [data] Done reading 214,655 sentences
+[2022-12-02 10:59:41] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 11:00:18] Ep. 52 : Up. 23800 : Sen. 40,182 : Cost 0.41566756 : Time 44.39s : 11003.48 words/s : gNorm 1.1496
+[2022-12-02 11:00:58] Ep. 52 : Up. 23900 : Sen. 82,817 : Cost 0.39468196 : Time 40.08s : 12938.04 words/s : gNorm 1.1988
+[2022-12-02 11:01:38] Ep. 52 : Up. 24000 : Sen. 128,527 : Cost 0.43637192 : Time 39.92s : 13118.01 words/s : gNorm 0.9631
+[2022-12-02 11:01:38] Saving model weights and runtime parameters to model/model.iter24000.npz
+[2022-12-02 11:01:39] Saving model weights and runtime parameters to model/model.npz
+[2022-12-02 11:01:41] Saving Adam parameters
+[2022-12-02 11:01:42] [training] Saving training checkpoint to model/model.npz and model/model.npz.optimizer.npz
+[2022-12-02 11:01:49] [valid] Ep. 52 : Up. 24000 : ce-mean-words : 1.60316 : stalled 2 times (last best: 1.56571)
+[2022-12-02 11:01:49] Translating validation set...
+[2022-12-02 11:01:50] Best translation 0 : entrante:
+[2022-12-02 11:01:50] Best translation 1 : Obteniendo información EXIF para %1...
+[2022-12-02 11:01:50] Best translation 2 : Vaya a la vista « Qué es lo siguiente » seleccionando la opción Ver Qué es lo siguiente del menú o presionando el botón « Qué es lo siguiente » de la barra de herramientas.
+[2022-12-02 11:01:50] Best translation 3 : & Brad. Hards;
+[2022-12-02 11:01:50] Best translation 4 : Puntuación:
+[2022-12-02 11:01:50] Best translation 5 : Archivos web
+[2022-12-02 11:01:50] Best translation 10 : Mostrar conversación
+[2022-12-02 11:01:50] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 11:01:50] Best translation 40 : Enviar:
+[2022-12-02 11:01:50] Best translation 80 : arcsin(x)
+[2022-12-02 11:01:53] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 11:01:56] Best translation 320 : Configurar preferencias de anti-Alita
+[2022-12-02 11:01:59] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 11:02:09] Best translation 1280 : Cantidad
+[2022-12-02 11:02:15] Total translation time: 26.59300s
+[2022-12-02 11:02:15] Saving model weights and runtime parameters to model/model.npz.best-bleu.npz
+[2022-12-02 11:02:16] [valid] Ep. 52 : Up. 24000 : bleu : 49.2167 : new best
+[2022-12-02 11:02:19] [valid] Ep. 52 : Up. 24000 : perplexity : 4.96872 : stalled 2 times (last best: 4.78607)
+[2022-12-02 11:02:19] Translating validation set...
+[2022-12-02 11:02:20] Best translation 0 : entrante:
+[2022-12-02 11:02:20] Best translation 1 : Obteniendo información EXIF para %1...
+[2022-12-02 11:02:20] Best translation 2 : Vaya a la vista « Qué es lo siguiente » seleccionando la opción Ver Qué es lo siguiente del menú o presionando el botón « Qué es lo siguiente » de la barra de herramientas.
+[2022-12-02 11:02:20] Best translation 3 : & Brad. Hards;
+[2022-12-02 11:02:20] Best translation 4 : Puntuación:
+[2022-12-02 11:02:20] Best translation 5 : Archivos web
+[2022-12-02 11:02:20] Best translation 10 : Mostrar conversación
+[2022-12-02 11:02:20] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 11:02:20] Best translation 40 : Enviar:
+[2022-12-02 11:02:20] Best translation 80 : arcsin(x)
+[2022-12-02 11:02:23] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 11:02:26] Best translation 320 : Configurar preferencias de anti-Alita
+[2022-12-02 11:02:29] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 11:02:39] Best translation 1280 : Cantidad
+[2022-12-02 11:02:45] Total translation time: 26.56624s
+[2022-12-02 11:02:45] Saving model weights and runtime parameters to model/model.npz.best-bleu-detok.npz
+[2022-12-02 11:02:46] [valid] Ep. 52 : Up. 24000 : bleu-detok : 49.2167 : new best
+[2022-12-02 11:03:26] Ep. 52 : Up. 24100 : Sen. 176,688 : Cost 0.43172610 : Time 108.13s : 4878.82 words/s : gNorm 1.0348
+[2022-12-02 11:04:00] Seen 212,676 samples
+[2022-12-02 11:04:00] Starting data epoch 53 in logical epoch 53
+[2022-12-02 11:04:00] [data] Shuffling data
+[2022-12-02 11:04:00] [data] Done reading 214,655 sentences
+[2022-12-02 11:04:01] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 11:04:14] Ep. 53 : Up. 24200 : Sen. 7,434 : Cost 0.42372531 : Time 47.74s : 11438.83 words/s : gNorm 1.1271
+[2022-12-02 11:04:55] Ep. 53 : Up. 24300 : Sen. 51,078 : Cost 0.40629143 : Time 41.34s : 12928.91 words/s : gNorm 1.0001
+[2022-12-02 11:05:36] Ep. 53 : Up. 24400 : Sen. 90,961 : Cost 0.40632403 : Time 40.40s : 13123.02 words/s : gNorm 0.8861
+[2022-12-02 11:06:15] Ep. 53 : Up. 24500 : Sen. 140,623 : Cost 0.45366424 : Time 39.35s : 13040.59 words/s : gNorm 1.0384
+[2022-12-02 11:06:53] Ep. 53 : Up. 24600 : Sen. 191,349 : Cost 0.43148783 : Time 37.62s : 12968.12 words/s : gNorm 1.1270
+[2022-12-02 11:07:12] Seen 212,676 samples
+[2022-12-02 11:07:12] Starting data epoch 54 in logical epoch 54
+[2022-12-02 11:07:12] [data] Shuffling data
+[2022-12-02 11:07:12] [data] Done reading 214,655 sentences
+[2022-12-02 11:07:13] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 11:07:40] Ep. 54 : Up. 24700 : Sen. 25,281 : Cost 0.44478604 : Time 46.88s : 11762.87 words/s : gNorm 1.1492
+[2022-12-02 11:08:22] Ep. 54 : Up. 24800 : Sen. 68,586 : Cost 0.36640206 : Time 42.07s : 13203.34 words/s : gNorm 0.9163
+[2022-12-02 11:09:01] Ep. 54 : Up. 24900 : Sen. 112,031 : Cost 0.42824280 : Time 39.61s : 12744.87 words/s : gNorm 1.1099
+[2022-12-02 11:09:40] Ep. 54 : Up. 25000 : Sen. 158,766 : Cost 0.45411876 : Time 38.55s : 12945.36 words/s : gNorm 1.1245
+[2022-12-02 11:10:20] Ep. 54 : Up. 25100 : Sen. 208,331 : Cost 0.42559442 : Time 39.61s : 13060.23 words/s : gNorm 1.1009
+[2022-12-02 11:10:24] Seen 212,676 samples
+[2022-12-02 11:10:24] Starting data epoch 55 in logical epoch 55
+[2022-12-02 11:10:24] [data] Shuffling data
+[2022-12-02 11:10:24] [data] Done reading 214,655 sentences
+[2022-12-02 11:10:25] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 11:11:06] Ep. 55 : Up. 25200 : Sen. 35,256 : Cost 0.39766064 : Time 46.65s : 11189.38 words/s : gNorm 1.0459
+[2022-12-02 11:11:48] Ep. 55 : Up. 25300 : Sen. 82,186 : Cost 0.41548240 : Time 41.64s : 13348.76 words/s : gNorm 0.8960
+[2022-12-02 11:12:28] Ep. 55 : Up. 25400 : Sen. 128,034 : Cost 0.41199979 : Time 40.26s : 12994.71 words/s : gNorm 1.0220
+[2022-12-02 11:13:07] Ep. 55 : Up. 25500 : Sen. 177,207 : Cost 0.45411402 : Time 39.03s : 13156.83 words/s : gNorm 1.0619
+[2022-12-02 11:13:36] Seen 212,676 samples
+[2022-12-02 11:13:36] Starting data epoch 56 in logical epoch 56
+[2022-12-02 11:13:36] [data] Shuffling data
+[2022-12-02 11:13:36] [data] Done reading 214,655 sentences
+[2022-12-02 11:13:37] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 11:13:52] Ep. 56 : Up. 25600 : Sen. 11,140 : Cost 0.38174972 : Time 44.81s : 10956.55 words/s : gNorm 1.1064
+[2022-12-02 11:14:32] Ep. 56 : Up. 25700 : Sen. 53,273 : Cost 0.38927284 : Time 39.79s : 12824.99 words/s : gNorm 1.1555
+[2022-12-02 11:15:11] Ep. 56 : Up. 25800 : Sen. 100,821 : Cost 0.43150577 : Time 39.56s : 13270.41 words/s : gNorm 1.0272
+[2022-12-02 11:15:52] Ep. 56 : Up. 25900 : Sen. 148,758 : Cost 0.42759949 : Time 40.90s : 13083.57 words/s : gNorm 0.9283
+[2022-12-02 11:16:31] Ep. 56 : Up. 26000 : Sen. 194,307 : Cost 0.40475452 : Time 39.28s : 13092.64 words/s : gNorm 0.9962
+[2022-12-02 11:16:31] Saving model weights and runtime parameters to model/model.iter26000.npz
+[2022-12-02 11:16:32] Saving model weights and runtime parameters to model/model.npz
+[2022-12-02 11:16:34] Saving Adam parameters
+[2022-12-02 11:16:35] [training] Saving training checkpoint to model/model.npz and model/model.npz.optimizer.npz
+[2022-12-02 11:16:42] [valid] Ep. 56 : Up. 26000 : ce-mean-words : 1.62924 : stalled 3 times (last best: 1.56571)
+[2022-12-02 11:16:42] Translating validation set...
+[2022-12-02 11:16:43] Best translation 0 : entrante:
+[2022-12-02 11:16:43] Best translation 1 : Obteniendo información EXIF de %1...
+[2022-12-02 11:16:43] Best translation 2 : Vaya a la vista « Qué es lo siguiente » seleccionando la opción Ver Qué es lo siguiente del menú o presionando el botón « Siguiente » de la barra de herramientas.
+[2022-12-02 11:16:43] Best translation 3 : & Brad. Hards;
+[2022-12-02 11:16:43] Best translation 4 : Puntuación:
+[2022-12-02 11:16:43] Best translation 5 : Archivos web
+[2022-12-02 11:16:43] Best translation 10 : Mostrar conversación
+[2022-12-02 11:16:43] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 11:16:43] Best translation 40 : Enviar:
+[2022-12-02 11:16:43] Best translation 80 : arcsin(x)
+[2022-12-02 11:16:46] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 11:16:48] Best translation 320 : Configurar las preferencias de anti-Alita
+[2022-12-02 11:16:52] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 11:17:01] Best translation 1280 : Cantidad
+[2022-12-02 11:17:08] Total translation time: 26.20648s
+[2022-12-02 11:17:08] Saving model weights and runtime parameters to model/model.npz.best-bleu.npz
+[2022-12-02 11:17:09] [valid] Ep. 56 : Up. 26000 : bleu : 49.584 : new best
+[2022-12-02 11:17:11] [valid] Ep. 56 : Up. 26000 : perplexity : 5.1 : stalled 3 times (last best: 4.78607)
+[2022-12-02 11:17:11] Translating validation set...
+[2022-12-02 11:17:13] Best translation 0 : entrante:
+[2022-12-02 11:17:13] Best translation 1 : Obteniendo información EXIF de %1...
+[2022-12-02 11:17:13] Best translation 2 : Vaya a la vista « Qué es lo siguiente » seleccionando la opción Ver Qué es lo siguiente del menú o presionando el botón « Siguiente » de la barra de herramientas.
+[2022-12-02 11:17:13] Best translation 3 : & Brad. Hards;
+[2022-12-02 11:17:13] Best translation 4 : Puntuación:
+[2022-12-02 11:17:13] Best translation 5 : Archivos web
+[2022-12-02 11:17:13] Best translation 10 : Mostrar conversación
+[2022-12-02 11:17:13] Best translation 20 : Cisco - Switch ISDNStencils
+[2022-12-02 11:17:13] Best translation 40 : Enviar:
+[2022-12-02 11:17:13] Best translation 80 : arcsin(x)
+[2022-12-02 11:17:16] Best translation 160 : Búsqueda detenida. Mostrar resultados de %1 a %2
+[2022-12-02 11:17:18] Best translation 320 : Configurar las preferencias de anti-Alita
+[2022-12-02 11:17:22] Best translation 640 : No se puede crear el nuevo archivo.
+[2022-12-02 11:17:31] Best translation 1280 : Cantidad
+[2022-12-02 11:17:37] Total translation time: 26.24652s
+[2022-12-02 11:17:37] Saving model weights and runtime parameters to model/model.npz.best-bleu-detok.npz
+[2022-12-02 11:17:38] [valid] Ep. 56 : Up. 26000 : bleu-detok : 49.584 : new best
+[2022-12-02 11:17:54] Seen 212,676 samples
+[2022-12-02 11:17:54] Starting data epoch 57 in logical epoch 57
+[2022-12-02 11:17:54] [data] Shuffling data
+[2022-12-02 11:17:54] [data] Done reading 214,655 sentences
+[2022-12-02 11:17:56] [data] Done shuffling 214,655 sentences to temp files
+[2022-12-02 11:18:25] Ep. 57 : Up. 26100 : Sen. 27,644 : Cost 0.43338272 : Time 113.95s : 4826.34 words/s : gNorm 0.9092

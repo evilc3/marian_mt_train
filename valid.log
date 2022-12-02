@@ -1,0 +1,29 @@
+[2022-12-02 10:01:48] [valid] Ep. 35 : Up. 16000 : ce-mean-words : 1.62407 : new best
+[2022-12-02 10:01:49] [valid] First sentence's tokens as scored:
+[2022-12-02 10:01:49] [valid] Decoding validation set with SentencePieceVocab for scoring
+[2022-12-02 10:01:49] [valid]   Hyp: Así que puede obtener la página que desea ver , las páginas pueden ser dadas ( y ) un nombre . Esto se puede hacer de la forma que se utiliza : haga doble clic sobre la página que desee renombrar . También podrá cambiar el nombre de la página . Por supuesto , también existe un acceso rápido de teclado , puede utilizar cualquier hora mientras escribe una nota . La nota rápida es : Ctrl ; M .
+[2022-12-02 10:01:49] [valid]   Ref: Para que pueda ir a la página que desea ver , las páginas pueden ( y deben ) tener un nombre . Esto se puede hacer del modo usual : seleccione la página que quiere renombrar , espere un segundo y pulse una vez más , entonces podrá renombrarla . También dispone de un acceso rápido de teclado que puede usar mientras está escribiendo una nota : Ctrl ; M .
+[2022-12-02 10:01:49] [valid] References contain unknown word, metric scores may be inaccurate
+[2022-12-02 10:02:22] [valid] Ep. 35 : Up. 16000 : bleu : 45.3174 : new best
+[2022-12-02 10:02:25] [valid] Ep. 35 : Up. 16000 : perplexity : 5.07369 : new best
+[2022-12-02 10:02:59] [valid] Ep. 35 : Up. 16000 : bleu-detok : 45.3174 : new best
+[2022-12-02 10:17:00] [valid] Ep. 39 : Up. 18000 : ce-mean-words : 1.57675 : new best
+[2022-12-02 10:17:26] [valid] Ep. 39 : Up. 18000 : bleu : 46.9387 : new best
+[2022-12-02 10:17:30] [valid] Ep. 39 : Up. 18000 : perplexity : 4.83922 : new best
+[2022-12-02 10:17:56] [valid] Ep. 39 : Up. 18000 : bleu-detok : 46.9387 : new best
+[2022-12-02 10:31:58] [valid] Ep. 44 : Up. 20000 : ce-mean-words : 1.56571 : new best
+[2022-12-02 10:32:28] [valid] Ep. 44 : Up. 20000 : bleu : 48.0642 : new best
+[2022-12-02 10:32:32] [valid] Ep. 44 : Up. 20000 : perplexity : 4.78607 : new best
+[2022-12-02 10:33:00] [valid] Ep. 44 : Up. 20000 : bleu-detok : 48.0642 : new best
+[2022-12-02 10:46:56] [valid] Ep. 48 : Up. 22000 : ce-mean-words : 1.5797 : stalled 1 times (last best: 1.56571)
+[2022-12-02 10:47:25] [valid] Ep. 48 : Up. 22000 : bleu : 48.8603 : new best
+[2022-12-02 10:47:27] [valid] Ep. 48 : Up. 22000 : perplexity : 4.85349 : stalled 1 times (last best: 4.78607)
+[2022-12-02 10:47:56] [valid] Ep. 48 : Up. 22000 : bleu-detok : 48.8603 : new best
+[2022-12-02 11:01:49] [valid] Ep. 52 : Up. 24000 : ce-mean-words : 1.60316 : stalled 2 times (last best: 1.56571)
+[2022-12-02 11:02:16] [valid] Ep. 52 : Up. 24000 : bleu : 49.2167 : new best
+[2022-12-02 11:02:19] [valid] Ep. 52 : Up. 24000 : perplexity : 4.96872 : stalled 2 times (last best: 4.78607)
+[2022-12-02 11:02:46] [valid] Ep. 52 : Up. 24000 : bleu-detok : 49.2167 : new best
+[2022-12-02 11:16:42] [valid] Ep. 56 : Up. 26000 : ce-mean-words : 1.62924 : stalled 3 times (last best: 1.56571)
+[2022-12-02 11:17:09] [valid] Ep. 56 : Up. 26000 : bleu : 49.584 : new best
+[2022-12-02 11:17:11] [valid] Ep. 56 : Up. 26000 : perplexity : 5.1 : stalled 3 times (last best: 4.78607)
+[2022-12-02 11:17:38] [valid] Ep. 56 : Up. 26000 : bleu-detok : 49.584 : new best
